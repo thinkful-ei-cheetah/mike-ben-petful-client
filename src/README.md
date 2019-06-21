@@ -1,24 +1,21 @@
-3 queues: dogs, cats, people SERVER SIDE
+# Petful
 
-Home Page: CLIENT SIDE
-	Description of the process
-	Meaningful pic and description
-	Button to start adoption process
+## Introduction
 
-Adoption Page: 
-	User Story 2 – INFO SERVER; DISPLAY CLIENT
-	Image of pet
-	Phys desc
-	Name, sex, age, breed
-	Story of journey
-	User Story 3
-	Only see pet next in line
-	Can choose to see other pets in line, but cannot adopt them
-	User Story 4
-	See place in line
-	See others in line before me
-	Should not be able to start process unless it’s my turn
-	User Story 5
-	See pets adopted by others
+Petful is an application to help the homeless pets new home. We know that there are cats and dogs in need of rescue from harmful and unfortunate circumstances. We also know that there are plenty of people outhere more than willing to provide these animals a caring and loving home. So, are you interested in adopting a pet? Join the Petful queue and see which lucky dog or cat you will have as a new companion!
+
+## Demo screenshots
+homepage
+
+## Contributors
+ [Benjamin Tilghman](https://github.com/RDanneskjold) & [Mike Jung](https://github.com/MikeJung90)
+
+Checkout the [Petful live here]()
+
+Checkout the [Client Github here](https://github.com/thinkful-ei-cheetah/mike-ben-petful-client)
+
+Checkout the [Server Github here](https://github.com/thinkful-ei-cheetah/mike-ben-petful-server)
 
 
+### technologies
+This app utilizes: HTML, CSS, React, Node, Express
