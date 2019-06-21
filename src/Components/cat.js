@@ -30,6 +30,8 @@ export default class Cat extends React.Component{
             <p>Story: {cats.story}</p>
             <p>Status: {this.props.status}</p>
 
+            <p>'testing'</p>
+
           </div>
         </section>
       )
