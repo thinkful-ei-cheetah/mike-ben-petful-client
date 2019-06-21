@@ -8,9 +8,12 @@ export default class Dog extends React.Component{
     const dogs = await ApiService.getDogs()
     
     this.props.setDogs(dogs);
-  
-    console.log(dogs)
-    
+  }
+
+  handleAdoptDog = async () => {
+    const dogs = await ApiService.adoptDog()
+
+    this.props.setDogs(dogs);
   }
   
   render() {
@@ -30,6 +33,7 @@ export default class Dog extends React.Component{
           <div className='dogs-info'>
 
             <img src={dogs.imageURL} height="300" width="300" alt="pet for adoption" />
+            <p>Name: {dogs.name}</p>
             <p>Sex: {dogs.sex}</p>
             <p>Age: {dogs.age}</p>
             <p>Breed: {dogs.breed}</p>
@@ -38,7 +42,7 @@ export default class Dog extends React.Component{
 
           </div>
 
-          <button>Adopt this dog!</button>
+          <button onClick={this.handleAdoptDog}>Adopt this dog!</button>
         </section>
     )}
   }

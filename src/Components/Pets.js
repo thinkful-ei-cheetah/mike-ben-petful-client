@@ -6,32 +6,35 @@ export default class Pets extends React.Component {
 
     state = {
         dogs: {},
-        cats: {}
+        cats: {},
+        firstInLine: false,
     }
 
     setDogs = dogs => {
         this.setState({
             dogs
-        }, this.refresh
-        )
+        })
     }
 
     setCats = cats => {
         this.setState({
             cats
-        }, this.refresh
-        )
+        })
     }
 
-    refresh = () => {
-        
+    handleAdoptDog = () => {
+        console.log('adopted')
+    }
+
+    handleAdoptCat = () => {
+        console.log('adopted')
     }
     
     render() {
         return (
             <section className='pet-list'>
-                <Dog dogs={this.state.dogs} setDogs={this.setDogs}/>
-                <Cat cats={this.state.cats} setCats={this.setCats}/>
+                <Dog dogs={this.state.dogs} setDogs={this.setDogs} adopt={this.handleAdoptDog}/>
+                <Cat cats={this.state.cats} setCats={this.setCats} adopt={this.handleAdoptCat}/>
             </section>
         )
     }

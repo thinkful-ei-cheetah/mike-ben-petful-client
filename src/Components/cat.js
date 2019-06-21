@@ -7,6 +7,12 @@ export default class Cat extends React.Component{
     this.props.setCats(cats);
   }
 
+  handleAdoptCat = async () => {
+    const cats = await ApiService.adoptCat()
+
+    this.props.setCats(cats);
+  }
+
   render() {
     if (!this.props.cats.first) {
       return (
@@ -23,17 +29,16 @@ export default class Cat extends React.Component{
           <div className='cats-info'>
 
             <img src={cats.imageURL} height="300" width="300" alt="pet for adoption" />
+            <p>Name: {cats.name}</p>
             <p>Sex: {cats.sex}</p>
             <p>Age: {cats.age}</p>
             <p>Breed: {cats.breed}</p>
             <p>Story: {cats.story}</p>
             <p>Status: {this.props.status}</p>
 
-            <p>'testing'</p>
-
           </div>
 
-          <button>Adopt this Cat!</button>
+          <button onClick={this.handleAdoptCat}>Adopt this Cat!</button>
         </section>
       )
     }

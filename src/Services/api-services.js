@@ -47,8 +47,10 @@ const ApiService = {
             )
     },
 
-    getCat(catId) {
-        return fetch(`${config.REACT_APP_API_BASE}/cats/${catId}`, {
+    adoptCat() {
+        return fetch(`${config.REACT_APP_API_BASE}/cats/delete`, {
+            method: 'DELETE',
+            mode: 'cors',
             headers: {
             },
         })
@@ -59,8 +61,24 @@ const ApiService = {
             )
     },
 
-    getDog(dogId) {
-        return fetch(`${config.REACT_APP_API_BASE}/dogs/${dogId}`, {
+    adoptDog() {
+        return fetch(`${config.REACT_APP_API_BASE}/dogs/delete`, {
+            method: 'DELETE',
+            mode: 'cors',
+            headers: {
+            },
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    },
+
+    personAdopted() {
+        return fetch(`${config.REACT_APP_API_BASE}/people/delete`, {
+            method: 'DELETE',
+            mode: 'cors',
             headers: {
             },
         })
@@ -71,17 +89,6 @@ const ApiService = {
             )
     },
     
-    getPerson(personId) {
-        return fetch(`${config.REACT_APP_API_BASE}/people/${personId}`, {
-            headers: {
-            },
-        })
-            .then(res =>
-                (!res.ok)
-                    ? res.json().then(e => Promise.reject(e))
-                    : res.json()
-            )
-    },
 }
 
 export default ApiService;

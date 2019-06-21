@@ -7,7 +7,7 @@ What does that mean?
 That means, our pets are adopted on a first come, first served basis. Our pets wait
 in line to be adopted, just as customers wait in line to be adopted.
 
-As a customer, you may pick whether you would like to adopt a CAT, a DOG, or BOTH!
+As a customer, you may pick whether you would like to adopt a CAT or a DOG!
 Simply click the corresponding button and you will be added to the line of people waiting
 to fill their home.
 
