@@ -21,7 +21,6 @@ export default class Cat extends React.Component{
       return (
         <section>
           <div className='cats-info'>
-            <p>cats go Here!</p>
 
             <img src={cats.imageURL} height="300" width="300" alt="pet for adoption" />
             <p>Sex: {cats.sex}</p>
@@ -33,6 +32,8 @@ export default class Cat extends React.Component{
             <p>'testing'</p>
 
           </div>
+
+          <button>Adopt this Cat!</button>
         </section>
       )
     }

@@ -14,7 +14,6 @@ export default class Dog extends React.Component{
   }
   
   render() {
-    console.log(this.props.dogs);
     
     if (!this.props.dogs.first) {
       return(
@@ -29,7 +28,6 @@ export default class Dog extends React.Component{
       return(
         <section>
           <div className='dogs-info'>
-            <p>Dogs go Here!</p>
 
             <img src={dogs.imageURL} height="300" width="300" alt="pet for adoption" />
             <p>Sex: {dogs.sex}</p>
@@ -39,6 +37,8 @@ export default class Dog extends React.Component{
             <p>Status: {this.props.status}</p>
 
           </div>
+
+          <button>Adopt this dog!</button>
         </section>
     )}
   }

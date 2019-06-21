@@ -12,14 +12,19 @@ export default class Pets extends React.Component {
     setDogs = dogs => {
         this.setState({
             dogs
-            }
+        }, this.refresh
         )
     }
 
     setCats = cats => {
         this.setState({
             cats
-        })
+        }, this.refresh
+        )
+    }
+
+    refresh = () => {
+        
     }
     
     render() {

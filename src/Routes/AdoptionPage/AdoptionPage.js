@@ -9,7 +9,7 @@ export default class AdoptionPage extends React.Component{
   render() {
     return (
       <section>
-        <h1>Adopt a cat, dog, or both!</h1>
+        <h1>Adopt a cat or dog!</h1>
         <div className='pets-info'>
           <Pets />
         </div>
