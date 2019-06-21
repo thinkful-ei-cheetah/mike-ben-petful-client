@@ -1,6 +1,6 @@
 import React from 'react';
-// import { Link } from "react-router-dom";
-// import ApiService from "../../src/Services/api-services";
+import { Link } from "react-router-dom";
+import Pets from '../../Components/Pets';
 // import Dog from "../Components/dog";
 // import Cat from '../Components/cat';
 
@@ -8,10 +8,16 @@ export default class AdoptionPage extends React.Component{
   render() {
     return (
       <section>
-        <h1>Adoption Page</h1>
+        <h1>Adopt a cat, dog, or both!</h1>
         <div className='pets-info'>
-          <p>TESTING!</p>
+          <Pets />
         </div>
+      
+        <Link to={'/'}>
+          <button>
+            I'm not quite ready to adopt yet
+          </button>
+        </Link>
       </section>
     )
   }
