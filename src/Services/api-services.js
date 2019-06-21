@@ -15,6 +15,7 @@ const ApiService = {
     },
 
     getDogs() {
+        console.log('getting dogs')
         return fetch(`${config.REACT_APP_API_BASE}/dogs`, {
             headers: {
             },

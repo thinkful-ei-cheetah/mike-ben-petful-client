@@ -4,7 +4,9 @@ import ApiService from '../Services/api-services';
 
 export default class Dog extends React.Component{
   onComponentDidMount() {
-    ApiService.getDogs();
+    ApiService.getDogs()
+      .then(dogs => this.props.setDogs(dogs));
+      console.log('hi')
   }
   
   render() {
@@ -12,6 +14,8 @@ export default class Dog extends React.Component{
       <section>
         <div className='dogs-info'>
           <p>Dogs go Here!</p>
+          {Object.keys(this.props.dogs)}
+
         </div>
       </section>
     )

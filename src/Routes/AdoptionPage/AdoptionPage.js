@@ -5,6 +5,7 @@ import Pets from '../../Components/Pets';
 // import Cat from '../Components/cat';
 
 export default class AdoptionPage extends React.Component{
+  
   render() {
     return (
       <section>
