@@ -10,12 +10,10 @@ export default class Pets extends React.Component {
     }
 
     setDogs = dogs => {
-        this.setState( prevState => ({
-            dogs: {
-                ...prevState.dogs,
-                dogs
+        this.setState({
+            dogs
             }
-        }))
+        )
     }
 
     setCats = cats => {
