@@ -4,7 +4,10 @@ const ApiService = {
 
     getCats() {
         return fetch(`${config.REACT_APP_API_BASE}/cats`, {
+            method: 'GET',
+            mode: 'cors',
             headers: {
+                'content-type': 'application/json',
             },
         })
             .then(res =>
@@ -12,12 +15,16 @@ const ApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
             )
+            .catch(err => console.log(err))
     },
 
     getDogs() {
         console.log('getting dogs')
         return fetch(`${config.REACT_APP_API_BASE}/dogs`, {
+            method: 'GET',
+            mode: 'cors',
             headers: {
+                'content-type': 'application/json',
             },
         })
             .then(res =>
@@ -25,6 +32,7 @@ const ApiService = {
                     ? res.json().then(e => Promise.reject(e))
                     : res.json()
             )
+            .catch(err => console.log(err))
     },
 
     getPeople() {

@@ -2,7 +2,7 @@ import React from 'react';
 import ApiService from '../Services/api-services';
 
 export default class Cat extends React.Component{
-  async onComponentDidMount() {
+  async componentDidMount() {
     const cats = await ApiService.getCats();
     this.props.setCats(cats);
   }
