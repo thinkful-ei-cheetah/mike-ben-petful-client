@@ -88,6 +88,20 @@ const ApiService = {
                     : res.json()
             )
     },
+
+    personAdd() {
+        return fetch(`${config.REACT_APP_API_BASE}/people/add`, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+            },
+        })
+            .then(res =>
+                (!res.ok)
+                    ? res.json().then(e => Promise.reject(e))
+                    : res.json()
+            )
+    }
     
 }
 

@@ -17,7 +17,7 @@ export default class Line extends React.Component {
 
     lengthOfLine = () => {
         let start = this.state.people.first;
-        let counter = 0;
+        let counter = 1;
         let next = start.next;
 
         console.log(next);
@@ -31,13 +31,23 @@ export default class Line extends React.Component {
     }
 
     adopted = async () => {
-        await ApiService.personAdopted();
-        const people = await ApiService.getPeople()
+        
+        const people = await ApiService.personAdopted();
+        // await ApiService.getPeople()
 
         this.setState({
             people,
         })
     }
+
+    addToLine = async() => {
+        
+        const people = await ApiService.personAdd();
+        
+        this.setState({
+            people,
+        })
+    } 
 
     render() {
 
@@ -56,6 +66,7 @@ export default class Line extends React.Component {
                     <p>There are {line} people in line! </p>
                     <p>The first person in line is {this.state.people.first.value.name}</p>
                     <button onClick={this.adopted}>test</button>
+                    <button onClick={this.addToLine}>add</button>
 
                     
                 </section>
